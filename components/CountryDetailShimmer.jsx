@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router'
+import { Link, useOutletContext } from 'react-router'
 import "./CountryDetail.css";
 
 export default function CountryDetailShimmer() {
+  const [dark] = useOutletContext()
 
   const Mapped = Array.from({ length: 8 }).map((el, i) => {
-    return <div key={i} style={{ backgroundColor: 'whitesmoke', width: '130px', height: '38px' }}></div>;
+    return <div key={i} style={{ backgroundColor: (dark ? '#485867' :'whitesmoke'), width: '130px', height: '38px' }}></div>;
   }
   )
 
@@ -16,9 +17,9 @@ export default function CountryDetailShimmer() {
         <i className="fa-solid fa-arrow-left"></i>&nbsp; Back
       </span>
       <div className="country-details">
-        <div style={{ backgroundColor: 'whitesmoke', width: '480px', height: "320px" }} />
+        <div style={{ backgroundColor: (dark ? '#485867' :'whitesmoke'), width: '480px', height: "320px" }} />
         <div className="details-text-container">
-          <h1 style={{ backgroundColor: 'whitesmoke', width: '150px', height: '52px' }}></h1>
+          <h1 style={{ backgroundColor: (dark ? '#485867' :'whitesmoke'), width: '150px', height: '52px' }}></h1>
           <div className="details-text">
             {Mapped}
           </div>

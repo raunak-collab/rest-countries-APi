@@ -63,7 +63,7 @@ export default function CountryDetail() {
         </div>
     }
 
-    return (data === null ? <CountryDetailShimmer /> : <main className={`${dark ? 'dark' : ''}`}>
+    return (data === null ? <main className={`${dark ? 'dark' : ''}`}><CountryDetailShimmer /></main> : <main className={`${dark ? 'dark' : ''}`}>
         <div className="country-details-container">
             <span className="back-button" onClick={() => history.back()}>
                 <i className="fa-solid fa-arrow-left"></i>&nbsp; Back
