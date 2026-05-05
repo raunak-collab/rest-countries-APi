@@ -1,0 +1,6 @@
+node_modules
+.parcel-cache
+server.js
+seed.js
+countriesData.js
+dist
